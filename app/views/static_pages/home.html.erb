@@ -65,7 +65,13 @@
                         <a class="page-scroll items" href="#aboutus">About Us</a>
                     </li>
                     <li>
-                        <a class="page-scroll login" href="/login">Log in</a>
+
+                        <% if logged_in? %>
+                            <%= link_to "Log out", logout_path, method: "delete" %>
+                        <% else%>
+                            <a class="page-scroll login" href="/login">Log in</a>
+                        <% end%>
+
                     </li>
                     <li>
                         <a class="page-scroll signup" href="/signup">Sign up</a>
