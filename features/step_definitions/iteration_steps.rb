@@ -33,3 +33,17 @@ end
 Then(/^The Sign up page should not move on$/) do
   '/signup'
 end
+
+#iteration 2
+
+Then(/^After typing my email and password, I press "([^"]*)"$/) do |text|
+      page.should have_content(text)
+end
+
+Then(/^I am on my profile page$/) do
+   '/users/:id'
+end
+
+Then(/^After typing the wrong email and password, I press "([^"]*)"$/) do |text|
+     page.should have_content(text)
+end
