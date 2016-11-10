@@ -1,18 +1,3 @@
-Rails.application.configure do
-#config.action_mailer.perform_deliveries = true
-config.action_mailer.raise_delivery_errors = true
-config.action_mailer.delivery_method = :smtp
-host = 'studyspace-byoun7529.c9users.io'
-config.action_mailer.default_url_options = { host: host}
-ActionMailer::Base.smtp_settings = {
-  :address        => 'smtp.gmail.com',
-  :port           => 587,
-  :user_name      => 'byun7529@gmail.com',
-  :password       => 'quswornjs2',
-  :domain         => 'gmail.com',
-  :authentication       => :plain,
-  :enable_starttls_auto => true
-}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
