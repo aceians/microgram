@@ -6,27 +6,26 @@
     <%= form_for(@user, url:signup_path)  do |f| %>
       <%= render 'shared/error_messages' %>
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :email %>
-      <%= f.email_field :email %>
+      <%= f.email_field :email, class: 'form-control' %>
       
       <%= f.label :individualrole, "Individual Role" %>
       <%= f.collection_select :individualrole, User::INDIVIDUAL_ROLES, :to_s, :to_s, 
-       :include_blank => true, :selected => 'Student'
-      %>
+       :include_blank => true, :selected => 'Student' , class: 'form-control' %>
       
       <%= f.label :org, "Organisation" %>
-      <%= f.text_field :org %>
+      <%= f.text_field :org, class: 'form-control' %>
       
       <%= f.label :dept, "Department" %>
-      <%= f.text_field :dept %>
+      <%= f.text_field :dept, class: 'form-control' %>
 
       <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
