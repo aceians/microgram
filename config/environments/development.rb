@@ -14,16 +14,7 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = false
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :test
-<<<<<<< HEAD
-  host = 'iteration2-dennyhong.c9users.io'
-=======
-  host = 'my-project-byoun7529.c9users.io'
->>>>>>> a021369a5a652a6df29b1a7171d71103247fe645
-  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
-  
+
 
 
   # Print deprecation notices to the Rails logger.
